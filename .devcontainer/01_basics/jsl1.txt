@@ -1,0 +1,37 @@
+
+
+
+
+
+
+
+
+###################datatype#####################
+
+There are 2 types of datatype
+1. Primitive datatype:-
+    1.String
+    2. Number
+    3. Boolean (true / false)
+    4. null (iska matlab hai empty or zero nahi hai)
+    5. undefined (aapne variable declare kardiya hai but usmein aap kya value dalenge aapne decide nahi kiya hai)
+    6. Symbol (kisi bhi value ko unique banane ke liye use kiya jata hai)
+    7. BigInt (jo badi values hoti hai oo hum BigInt mein use karte hai)
+
+2. reference datatype (Non Primitive datatype)
+    1. Array ( [ ] )
+    2. Object ( { } )
+    3. Function ( function( ){ } )
+
+
+
+##################stack and heap###########
+In JavaScript, data types are classified based on memory allocation:
+
+1))Primitive Data Types: These are passed by value and include string, number, boolean, null, undefined, BigInt, and symbol. They are stored in the stack memory.
+
+2)))Reference (Non-Primitive) Data Types: These are passed by reference and include arrays, objects, and functions. They are stored in the heap memory.
+
+*******JavaScript is a dynamically typed language, meaning that you do not need to declare the data type of a variable when defining it. The type is determined at runtime.
+
+
