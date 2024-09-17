@@ -36,3 +36,42 @@ function loginUserMessage(username = "sam"){
 
 console.log(loginUserMessage());
 
+
+
+
+
+/// when you don't know the number of price
+//the we use rest operator(...) and pass the various of number of argument
+function calculateCartPrice(val1, val2, ...num1){
+    return num1
+}
+
+console.log(calculateCartPrice(200,400,500, 444))// [500 , 444]
+
+const user =  {
+    username :"mohit",
+    price: 199
+}
+ 
+ function handleObject (anyobject){
+    console.log(`username is ${anyobject.username} and Price is ${anyobject.price}`);
+    
+
+ }
+
+//  handleObject(user)
+
+ handleObject({
+    username:"sam",
+    price: 399
+ })
+
+
+ const mynewArray = [ 200, 400, 1000,600]
+function returnScondValue(getArray){
+
+    return getArray[1]
+
+}
+// console.log(returnScondValue(mynewArray));
+console.log(returnScondValue([200,444,55]));
