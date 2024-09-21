@@ -1,0 +1,57 @@
+In JavaScript, the **execution context** refers to the environment in which JavaScript code is executed. It's crucial for understanding how JavaScript manages variables, functions, and the scope during execution. Here's a breakdown of the key aspects of the JavaScript execution context:
+
+### 1. **Global Execution Context**
+   - **Created by default** when the JavaScript file or script starts.
+   - **Global object** (like `window` in browsers) and the `this` keyword refer to the global object.
+   - Variables and functions declared at the global level are stored in this context.
+
+### 2. **Function Execution Context**
+   - Every time a function is called, a new execution context is created specifically for that function.
+   - Each function execution context has its own:
+     - **Local variables**: Variables declared within the function.
+     - **Arguments**: Passed to the function.
+     - **Scope chain**: It can access variables from its own scope, the global scope, and any outer scope it is nested in.
+     - **this**: The value of `this` depends on how the function is called.
+
+### 3. **Execution Context Lifecycle**
+   There are three phases:
+   - **Creation phase(memory creation phase)**:
+     - The **scope chain** is created.
+     - Variables, functions, and arguments are **hoisted** (declared but not initialized).
+     - `this` is determined.
+   - **Execution phase**:
+     - The code is executed line by line.
+     - Variables are assigned values, and functions are invoked.
+   - **Destruction**: After execution, the function context is popped off the call stack.
+
+### 4. **Call Stack**
+   - The **call stack** is used to manage multiple execution contexts.
+   - When a function is invoked, its execution context is **pushed** onto the call stack.
+   - When the function completes, the execution context is **popped** from the stack.
+
+### 5. **Lexical Environment**
+   - A structure holding variable and function declarations within the current scope.
+   - **Outer Lexical Environment**: Refers to the parent execution context (enclosing function or global scope).
+
+### 6. **Types of Scope in Execution Context**
+   - **Global Scope**: Variables defined outside of any function.
+   - **Function Scope**: Variables defined inside a function.
+   - **Block Scope**: Variables declared with `let` or `const` inside a block (like within an `if` or `for` block).
+
+### Example of Execution Context:
+```javascript
+var x = 10;  // Global execution context
+
+function foo(y) {
+  var z = 20;  // Function execution context for foo
+  return x + y + z;
+}
+
+foo(30);  // Call creates new execution context
+```
+
+In this example:
+- The global execution context is created when `x` is declared.
+- When `foo(30)` is called, a new execution context is created for the function, and variables `y` and `z` are handled within that context. The function then has access to `x` from the global context due to the scope chain.
+
+Understanding execution contexts is key to mastering JavaScript's behavior, especially with closures, hoisting, and scope.
